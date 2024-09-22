@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import { GlobalStyle } from './components/GlobalStyle';
 import { ThemeProvider } from 'styled-components';
+import { Example1 } from './components/Example1';
+import videos from './videos.json';
 
 const theme = {};
 
@@ -11,7 +13,7 @@ root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <h1>Hello, React</h1>
+      <Example1 url={videos} />
     </ThemeProvider>
   </React.StrictMode>
 );
