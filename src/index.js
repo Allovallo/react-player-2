@@ -1,19 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import { GlobalStyle } from './components/GlobalStyle';
 import { ThemeProvider } from 'styled-components';
+import { GlobalStyle } from './components/GlobalStyle';
 import { Example1 } from './components/Example1';
+import './index.css';
 import videos from './videos.json';
+// import { Reader } from 'components/Reader/Reader';
+// import publications from 'publications.json';
 
 const theme = {};
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Example1 url={videos} />
+      {/* <Reader items={publications} /> */}
     </ThemeProvider>
   </React.StrictMode>
 );
