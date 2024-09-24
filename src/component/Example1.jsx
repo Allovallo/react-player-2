@@ -14,7 +14,7 @@ export class Example1 extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{ padding: 24 }}>
         <h1>Selected video: {this.state.selectedVideo}</h1>
         <VideoList videos={videos} onSelect={this.selectVideo} />
         <Player url={this.state.selectedVideo} />
